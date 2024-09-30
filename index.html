@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chris's Personal Page</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            transition: background 0.3s ease;
+        }
+
+        /* Light mode colors */
+        @media (prefers-color-scheme: light) {
+            body {
+                background: linear-gradient(135deg, #e6f7ff, #d6eaff);
+                color: #1a3d5d;
+            }
+            .card {
+                background: rgba(255, 255, 255, 0.6);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                border: 1px solid rgba(26, 61, 93, 0.1);
+                color: #1a3d5d;
+            }
+            .contact-btn {
+                background: linear-gradient(45deg, #4facfe, #00f2fe);
+            }
+            .contact-btn:hover {
+                background: linear-gradient(45deg, #499AE2, #01BAC3);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            }
+            .social-icons a {
+                color: #1a3d5d;
+            }
+            .social-icons a:hover {
+                color: #007bb5;
+            }
+            h1 {
+                color: #007bb5;
+            }
+            a {
+                color: #007bb5;
+            }
+            a:hover {
+                color: #005f8d;
+            }
+        }
+
+        /* Dark mode colors */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(135deg, #2c3e50, #34495e);
+                color: #b0c4de;
+            }
+            .card {
+                background: rgba(0,0,0, 0.2);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                color: #b0c4de;
+            }
+            .contact-btn {
+                background: linear-gradient(45deg, #3498db, #00c3e3);
+            }
+            .contact-btn:hover {
+                background: linear-gradient(45deg, #2C83BD, #03A2BD);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            }
+            .social-icons a {
+                color: #b0c4de;
+            }
+            .social-icons a:hover {
+                color: #3498db;
+            }
+            h1 {
+                color: #3498db;
+            }
+            a {
+                color: #3498db;
+            }
+            a:hover {
+                color: #1f78b4;
+            }
+        }
+
+        .card {
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 28px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .social-icons a:hover {
+            transform: scale(1.1);
+        }
+
+        .social-icons {
+            margin-bottom: 20px;
+        }
+        
+        .contact-btn {
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            margin-top: 10px;
+        }
+        
+        a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Hi, I'm Chris!</h1>
+        <p>I love anything IT and I'm a master of bodges.</p>
+        <p>Reach me at <a href="mailto:info@chrismin13.com">info@chrismin13.com</a> or <a href="https://twitter.com/chrismin13" target="_blank">@chrismin13</a> on all platforms.</p>
+        
+        <a href="mailto:info@chrismin13.com" class="btn contact-btn">Contact Me</a>
+        
+        <div class="social-icons">
+            <a href="https://github.com/chrismin13" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://x.com/chrismin13" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://instagram.com/chrismin13" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/chrismin13" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://open.spotify.com/user/chrismin13" target="_blank"><i class="fab fa-spotify"></i></a>
+        </div>
+        <p>Thank you for visiting my website :)</p>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
