@@ -136,6 +136,20 @@
             margin-top: 5px;
         }
 
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4facfe;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: opacity 0.5s ease, bottom 0.5s ease;
+        }
+        
         p {
             margin-top: 10px;
         }
@@ -153,7 +167,7 @@
         <p>I love anything IT and I'm a master of bodges.</p>
         <p><a href="https://bsky.app/profile/chrismin13.com" target="_blank">@chrismin13</a> on all platforms.</p>
        
-        <a href="mailto:info@chrismin13.com" class="btn contact-btn">
+        <a href="mailto:info@chrismin13.com" id="copyEmailBtn" class="btn contact-btn">
             Contact Me
             <span class="sub-text">info@chrismin13.com</span>
         </a>
@@ -168,10 +182,34 @@
         <p>Thank you for visiting my website :)</p>
     </div>
 
+    <div id="notification" class="notification">Email copied to clipboard!</div>
+
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom Script -->
+    <script>
+        document.getElementById('copyEmailBtn').addEventListener('click', function() {
+            // Copy email to clipboard
+            const email = 'info@chrismin13.com';
+            navigator.clipboard.writeText(email).then(function() {
+                // Show notification
+                const notification = document.getElementById('notification');
+                notification.style.opacity = '1';
+                notification.style.bottom = '40px';
+                
+                // Hide notification after 2 seconds
+                setTimeout(function() {
+                    notification.style.opacity = '0';
+                    notification.style.bottom = '20px';
+                }, 2000);
+            }, function() {
+                console.error('Failed to copy email.');
+            });
+        });
+    </script>
 
 </body>
 </html>
